@@ -1,0 +1,111 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\AppProgrammingCodes\\repos\\Blitzy_POC_Application\\OAuthTestApp\\OAuthTestApp.csproj": {}
+  },
+  "projects": {
+    "D:\\AppProgrammingCodes\\repos\\Blitzy_POC_Application\\OAuthTestApp\\OAuthTestApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\AppProgrammingCodes\\repos\\Blitzy_POC_Application\\OAuthTestApp\\OAuthTestApp.csproj",
+        "projectName": "OAuthTestApp",
+        "projectPath": "D:\\AppProgrammingCodes\\repos\\Blitzy_POC_Application\\OAuthTestApp\\OAuthTestApp.csproj",
+        "packagesPath": "C:\\Users\\anuraga\\.nuget\\packages\\",
+        "outputPath": "D:\\AppProgrammingCodes\\repos\\Blitzy_POC_Application\\OAuthTestApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\anuraga\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Hl7.Fhir.R4": {
+              "target": "Package",
+              "version": "[5.8.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.IdentityModel.Protocols.OpenIdConnect": {
+              "target": "Package",
+              "version": "[7.5.2, )"
+            },
+            "SeriLog": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Sustainsys.Saml2.AspNetCore2": {
+              "target": "Package",
+              "version": "[2.9.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

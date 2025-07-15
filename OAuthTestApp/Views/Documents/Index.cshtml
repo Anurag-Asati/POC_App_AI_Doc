@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Documents";
+}
+
+<div class="text-center">
+    <h3>Patient Documents View</h3>
+</div>
+
+<div>
+    @if (ViewData["DMDocsURL"] != null)
+    {
+        <p>DM URL @ViewData["DMDocsURL"]</p>
+    }
+    else
+    {
+        <p>DM content could not be displayed.</p>
+    }
+</div>

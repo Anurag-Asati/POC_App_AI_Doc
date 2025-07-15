@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    int claimsCount = 0;
+    if (!string.IsNullOrEmpty(ViewData["ClaimsCount"].ToString()))
+        claimsCount = Convert.ToInt32(ViewData["ClaimsCount"].ToString());
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome Here</h1>
+    <p>Welcome to the SMART on FHIR MVC application.</p>
+</div>
+
+<div>
+    @if (ViewData["IDToken"] != null)
+    {
+        <p>IDToken is @ViewData["IDToken"]</p>
+    }
+    else
+    {
+        <p>No IDToken exists</p>
+    }
+    
+    @if (ViewData["PatientID"] != null)
+    {
+        <p>PatientId is @ViewData["PatientID"]</p>
+    }
+    else
+    {
+        <p>No PatientID exists</p>
+    }
+
+    @if (ViewData["ProviderID"] != null)
+    {
+        <p>ProviderID is @ViewData["ProviderID"]</p>
+    }
+    else
+    {
+        <p>No ProviderID exists</p>
+    }
+
+    @if (ViewData["launchCode"] != null)
+    {
+        <p>LaunchCode is @ViewData["launchCode"]</p>
+    }
+    else
+    {
+        <p>No LaunchCode exists</p>
+    }
+
+    @if (ViewData["TokenResponse"] != null)
+    {
+        <p>Token Response is @ViewData["TokenResponse"]</p>
+    }
+    else
+    {
+        <p>No Token Response exists</p>
+    }
+
+    @if (ViewData["PatientData"] != null)
+    {
+        <p>PatientData is @ViewData["PatientData"]</p>
+    }
+    else
+    {
+        <p>No PatientData exists</p>
+    }
+
+    <p>Total Claims Count: @claimsCount.ToString()</p>
+
+    @for (int i = 0; i < claimsCount; i++)
+    {
+        <p>Claim value @i: @ViewData["Claim" + i.ToString()]</p>
+    }
+</div>
