@@ -48,7 +48,7 @@ public class DocumentService
         return url;
     }
 
-    private async Task GetData()
+    public async Task GetData()
     {
         var provDetails = await _ehrService.GetProviderDetails("291");
         var userName = provDetails.LoginName;
