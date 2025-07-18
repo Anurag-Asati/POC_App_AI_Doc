@@ -48,6 +48,26 @@ public class DocumentService
         return url;
     }
 
+    private async Task GetData()
+    {
+        var provDetails = await _ehrService.GetProviderDetails("291");
+        var userName = provDetails.LoginName;
+        var acc = _dmSettings.DMAccount;
+        var sec = _dmSettings.DMSecretApiKey;
+
+        var jsonData = await _ehrService.GetPatientDataAsync("22");
+        
+        var hexUserName = StrToHex(RC4Encrypt(userName, sec));
+        var hexAccount = StrToHex(RC4Encrypt(acc, sec));
+        var hexSecret = StrToHex(RC4Encrypt(sec, sec));
+        var hexPatient = StrToHex(RC4Encrypt(jsonData, sec));
+
+        var baseUrl = _dmSettings.DMBaseUrl;
+        var authUrl = _dmSettings.DMAuthUrl;
+
+        var url = baseUrl + authUrl + "?" + "u=" + hexUserName + "&a=" + hexAccount + "&d=" + hexPatient;
+    }
+
     private static string RC4Encrypt(string p_str, string p_key)
     {
         int[] s = new int[256];
